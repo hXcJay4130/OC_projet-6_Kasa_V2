@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import previous from '../assets/previous.png'
 import next from '../assets/next.png'
@@ -6,11 +7,8 @@ import '../styles/slideShow.scss'
 
 function Slideshow({flatImg}) {
 
-    // const flatImg = flatImg
-    // console.log(flatImg)
     const imagePath = flatImg.toString().split(',')
     const imagesNumber = imagePath.length;
-    // let imagesPathArray = flatObject.pictures.toString().split(',')
 
     const [index, setIndex] = useState(0);
     const handlePrevious = () => {
@@ -21,7 +19,7 @@ function Slideshow({flatImg}) {
         const newIndex = index + 1;
         setIndex(newIndex >= imagesNumber ? 0 : newIndex);
     }
-  
+
     if ( imagesNumber === 1 ) {
     return (
         <div className='slideshow'>

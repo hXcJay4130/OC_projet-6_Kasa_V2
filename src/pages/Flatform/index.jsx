@@ -19,35 +19,31 @@ function FlatForm() {
       .then(
         (result) => {
           setIsLoaded(true);
-          // setFlats(result);
-          setFlats(result.filter(item => item.id === flatNumber));
-          // if (flats.length == 0) {
-          //   setError(error);
-          // }
-          // console.log(result);
+          const tempFlat = result.filter(item => item.id === flatNumber);
+          tempFlat.length!==0 ? (
+            setFlats(result.filter(item => item.id === flatNumber))
+          ) : (
+            navigate("/*")
+          );
         },
         // Il faut gérer les erreurs ici plutôt que dans un bloc catch() afin que nous n’avalions pas les exceptions dues à de véritables bugs dans les composants.
         (error) => {
           setIsLoaded(true);
           setError(error);
+          navigate("/*");
         }
       )
-  }, [navigate])
+  }, [navigate, flatNumber , error])
 
   if (error) {
-    navigate("/*");
-    
-  } else if (flats.length === 0) {
+    console.log('erreur');
     navigate("/*");
   }
-   else if (!isLoaded) {
+  else if (!isLoaded) {
     return <div>Chargement...</div>;
   } else {
-    
-    // const flatFiltered = flats.filter(item => item.id === flatNumber)
-    // const flatData = flatFiltered[0]
+
     const flatData = flats[0]
- 
     return (
       <main>
         <Slideshow flatImg={flatData.pictures} />

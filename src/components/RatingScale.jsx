@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ActiveStar from '../assets/star-active.png'
 import InactiveStar from '../assets/star-inactive.png'
 

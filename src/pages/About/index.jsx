@@ -29,7 +29,6 @@ function About() {
   }, [])
 
   if (error) {
-    // return (<div>Erreur : {error.message}</div>);3
     navigate("/*");
   } else if (!isLoaded) {
     return <div>Chargement...</div>;

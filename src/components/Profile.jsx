@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import RatingScale from './RatingScale'
 import '../styles/flatForm.scss'
 
