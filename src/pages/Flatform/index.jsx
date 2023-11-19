@@ -12,7 +12,7 @@ function FlatForm() {
   const [flats, setFlats] = useState([]);
   const navigate = useNavigate();
   const {flatNumber} = useParams()
-  // Remarque : le tableau vide de dépendances [] indique que useEffect ne s’exécutera qu’une fois
+  
   useEffect(() => {
     fetch('/src/datas/logements.json')
       .then(res => res.json())
@@ -33,7 +33,7 @@ function FlatForm() {
           navigate("/*");
         }
       )
-  }, [navigate, flatNumber , error])
+  }, [navigate, flatNumber])
 
   if (error) {
     console.log('erreur');

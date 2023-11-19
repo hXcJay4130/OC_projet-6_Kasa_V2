@@ -59,27 +59,42 @@ main {
     }
 }
 
+//********** Footer style **********
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    img {
+        margin-bottom: 30px;
+    }
+}
+
 @media (max-width: 940px) {
     .navbar {
         .navbar__link {
             font-size: 12px;
             font-weight: 500;
             text-transform: uppercase;
+            margin: 10px;
+            margin-top:20px;
         }
         .navbar__logo {
             width: 145px;
+            height: 47px;
+        }
+    }
+    footer {
+        font-size: 12px;
+        p {
+            width: 123px;
+            text-align: center;
         }
     }
 }
 
-//********** Footer style **********
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    font-size: 24px;
-    width: 100%;
-    color: white;
-    background-color: black;
-}

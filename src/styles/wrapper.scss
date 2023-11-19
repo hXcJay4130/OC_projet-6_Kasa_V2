@@ -22,9 +22,13 @@
 
 @media (max-width: 940px) {
     .wrapper {
+        height: 111px;
+        position: relative;
         .wrapper__text {
             font-size: 24px;
             margin: 1em;
+            position: absolute;
+            top:0px;
         }
     }
 }

@@ -41,13 +41,21 @@
 @media (max-width: 940px) {
     .card {
         width: 100%;
-		height: auto;
-		margin-top: 0;
+		height: 255px;
+		margin-top: 20px;
+		.card__cover {
+			object-fit:cover;
+			width: 100%;
+			height: 255px;
+			// border-radius: 10px;
+		}
     }
 	.rentinglist {
 		background-color: transparent;
+		margin-top: 0;
 		.rentinglist__list {
 			padding: 0;
+			
 		}
 	}
 }

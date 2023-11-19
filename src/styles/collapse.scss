@@ -1,13 +1,14 @@
 .collapse {
     display:flex;
     flex-direction: column;
-    background-color: #F6F6F6;
-    border-radius: 5px;
+    // background-color: #F6F6F6;
+    // border-radius: 5px;
     margin-top: 30px;
     font-size: 18px;
     font-weight: 400;
     line-height: 25.67px;
-    height: auto;
+    // height: auto;
+    width: 100%;
 }
 .about__collapse {
     width: 71%;
@@ -27,18 +28,26 @@
 }
 
 .collapse__content--closed {
+    // display: flex;
     visibility: hidden;
     overflow: hidden;
     padding-left: 20px;
     padding-right: 20px;
     height: 0;
+    // width: 100%;
     transition: all 100ms ease-in-out;
+    background-color: #F6F6F6;
+    border-radius: 5px;
 }
     
 .collapse__content--open {
+    // display: flex;
     padding: 20px;
     height: 100%;
+    // width: 100%;
     transition: all 100ms ease-in-out;
+    background-color: #F6F6F6;
+    border-radius: 5px;
 }
 
 .collapse__icon {
